@@ -1,0 +1,110 @@
+package gameGUI;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JRadioButton;
+import java.awt.BorderLayout;
+import java.awt.GridBagLayout;
+import java.awt.GridBagConstraints;
+import javax.swing.JButton;
+import java.awt.Insets;
+import javax.swing.JTextField;
+import javax.swing.Box;
+import java.awt.Canvas;
+import javax.swing.JTable;
+import javax.swing.JLabel;
+import javax.swing.JCheckBox;
+import javax.swing.JLayeredPane;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.LineBorder;
+import java.awt.Color;
+
+public class gameGUI {
+
+	private JFrame frame;
+	private JTable table;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					gameGUI window = new gameGUI();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public gameGUI() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JRadioButton rdbtnHuman = new JRadioButton("Human");
+		rdbtnHuman.setBounds(6, 62, 90, 23);
+		frame.getContentPane().add(rdbtnHuman);
+		
+		JRadioButton rdbtnNewRadioButton = new JRadioButton("Computer");
+		rdbtnNewRadioButton.setBounds(6, 140, 102, 23);
+		frame.getContentPane().add(rdbtnNewRadioButton);
+		
+		table = new JTable();
+		table.setBounds(209, 222, 82, -85);
+		frame.getContentPane().add(table);
+		
+		JLabel lblNewLabel = new JLabel("SOS");
+		lblNewLabel.setBounds(140, 8, 43, 16);
+		frame.getContentPane().add(lblNewLabel);
+		
+		JCheckBox chckbxNewCheckBox = new JCheckBox("New check box");
+		chckbxNewCheckBox.setBounds(6, 243, 128, 23);
+		frame.getContentPane().add(chckbxNewCheckBox);
+		
+		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("S");
+		rdbtnNewRadioButton_1.setBounds(31, 86, 62, 23);
+		frame.getContentPane().add(rdbtnNewRadioButton_1);
+		
+		JRadioButton rdbtnNewRadioButton_2 = new JRadioButton("O");
+		rdbtnNewRadioButton_2.setBounds(31, 114, 62, 23);
+		frame.getContentPane().add(rdbtnNewRadioButton_2);
+		
+		JRadioButton rdbtnNewRadioButton_3 = new JRadioButton("Computer");
+		rdbtnNewRadioButton_3.setBounds(311, 140, 117, 23);
+		frame.getContentPane().add(rdbtnNewRadioButton_3);
+		
+		JRadioButton rdbtnNewRadioButton_2_1 = new JRadioButton("O");
+		rdbtnNewRadioButton_2_1.setBounds(339, 114, 62, 23);
+		frame.getContentPane().add(rdbtnNewRadioButton_2_1);
+		
+		JRadioButton rdbtnNewRadioButton_1_1 = new JRadioButton("S");
+		rdbtnNewRadioButton_1_1.setBounds(339, 86, 62, 23);
+		frame.getContentPane().add(rdbtnNewRadioButton_1_1);
+		
+		JRadioButton rdbtnHuman_1 = new JRadioButton("Human");
+		rdbtnHuman_1.setBounds(311, 62, 90, 23);
+		frame.getContentPane().add(rdbtnHuman_1);
+		
+		JLayeredPane layeredPane = new JLayeredPane();
+		layeredPane.setBackground(Color.GRAY);
+		layeredPane.setBorder(new LineBorder(new Color(0, 0, 0)));
+		layeredPane.setBounds(108, 36, 204, 195);
+		frame.getContentPane().add(layeredPane);
+	}
+}
